@@ -4,6 +4,7 @@
   "homepage": "https://prof-tejera.github.io/homework-4-DoryAzar/",
   "private": true,
   "dependencies": {
+    "classnames": "^2.3.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",

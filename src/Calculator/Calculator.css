@@ -1,0 +1,7 @@
+.container {
+    display: flex;
+  }
+
+.operators {
+    padding-left: 10px;
+}

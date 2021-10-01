@@ -1,20 +1,20 @@
 import { Component } from 'react';
-import styled from 'styled-components';
-
-const Container = styled.div`
-  padding: 10px;
-  border: 1px solid black;
-  width: 60px;
-`;
+import Button from './Button/Button';
+import PropTypes from 'prop-types';
 
 class Number extends Component {
   render() {
     return (
-      <Container onClick={() => this.props.onClick(this.props.value)}>
+      <Button  {...this.props}>
         {this.props.value}
-      </Container>
+      </Button>
     );
   }
+}
+
+Number.propTypes =  {
+  value: PropTypes.number.isRequired,
+  onClick: PropTypes.func.isRequired
 }
 
 export default Number;

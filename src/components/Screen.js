@@ -1,18 +1,17 @@
 import { Component } from 'react';
-import styled from 'styled-components';
+import Display from './Display/Display';
+import PropTypes from 'prop-types';
 
-const Container = styled.div`
-  border: 1px solid black;
-  width: 300px;
-  height: 70px;
-  text-align: right;
-  margin-bottom: 10px;
-`;
 
 class Screen extends Component {
+
   render() {
-    return <Container>{this.props.value}</Container>;
+    return <Display {...this.props} type="number">{this.props.value}</Display>;
   }
+}
+
+Screen.propTypes = {
+  type: PropTypes.oneOf(['number', 'text'])
 }
 
 export default Screen;

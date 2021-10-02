@@ -13,7 +13,7 @@ class Number extends Component {
 }
 
 Number.propTypes =  {
-  value: PropTypes.number.isRequired,
+	value: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "."]).isRequired,
   onClick: PropTypes.func.isRequired
 }
 

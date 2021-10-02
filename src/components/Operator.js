@@ -13,7 +13,7 @@ class Operator extends Component {
 }
 
 Operator.propTypes =  {
-  value: PropTypes.oneOf(['+', '-', 'x', '=', '/', 'clear']).isRequired,
+  value: PropTypes.oneOf(['+', '-', 'x', '=', '/', '+/-', 'clear']).isRequired,
   onClick: PropTypes.func.isRequired
 }
 

@@ -8,7 +8,7 @@ class Display extends Component {
 
 	render() {
 
-		const {type, maxLength, ...displayAttributes} = this.props;
+		const {type, ...displayAttributes} = this.props;
 
 		const displayStyle = [{
 			display: true,

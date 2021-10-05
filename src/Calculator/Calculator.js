@@ -52,13 +52,29 @@ class Calculator extends Component {
     }
   };
 
-  getScreenValue = () => this.state.second  || this.state.first;
+  getScreenValue = () => {
+
+    // Stringify result to assess length
+    const stringValue = (this.state.second || this.state.first).toString();
+
+    // When precision exceeded, limit scientific notation to 10 decimals
+    if (stringValue.length > this.precision) {
+      const screenValue  = parseFloat(this.state.second  || this.state.first);
+      return screenValue === 0 ? 0 : screenValue.toExponential(this.precision -5);
+    }
+    return stringValue;
+
+  }
 
   // Validates the number entries as supported by  the calculator
   validate = (v) => {
     
     // if string is just a ., then add 0
     if (v  && v === ".") return "0.";
+
+    // if more than one decimal point entered, ignore
+    const numberArray = v.split(".");
+    if (numberArray.length > 1) return numberArray.slice(0, 2).join(".") + numberArray.slice(2).join("");
     
     // if string results in 0, return 0
     if (v && parseInt(v) === 0) return "0";
@@ -68,10 +84,6 @@ class Calculator extends Component {
 
     // if string is more than the defined calculator precision then cut
     if (v && v.length > this.precision - 1) return v.substring(0, this.precision);
-
-    // if more than one decimal point entered, ignore
-    const numberArray = v.split(".");
-    if (numberArray.length > 1) return numberArray.slice(0, 2).join(".") + numberArray.slice(2).join("");
 
     return v;
   }

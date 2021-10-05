@@ -9,7 +9,7 @@ import './Calculator.css';
 
 class Calculator extends Component {
 
-  precision  = 17;
+  precision  = 15;
   state = {
     first: 0,
     operator: null,
@@ -60,10 +60,6 @@ class Calculator extends Component {
     // if string is just a ., then add 0
     if (v  && v === ".") return "0.";
     
-    // if more than oone decimal point entered, ignore
-    const numberArray = v.split(".");
-    if (numberArray.length > 1) return numberArray.slice(0, 2).join(".") + numberArray.slice(2).join("");
-    
     // if string results in 0, return 0
     if (v && parseInt(v) === 0) return "0";
 
@@ -72,6 +68,11 @@ class Calculator extends Component {
 
     // if string is more than the defined calculator precision then cut
     if (v && v.length > this.precision - 1) return v.substring(0, this.precision);
+
+    // if more than one decimal point entered, ignore
+    const numberArray = v.split(".");
+    if (numberArray.length > 1) return numberArray.slice(0, 2).join(".") + numberArray.slice(2).join("");
+
     return v;
   }
 

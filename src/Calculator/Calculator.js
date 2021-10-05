@@ -52,6 +52,7 @@ class Calculator extends Component {
     }
   };
 
+  // Get the result and display on screen
   getScreenValue = () => {
 
     // Stringify result to assess length

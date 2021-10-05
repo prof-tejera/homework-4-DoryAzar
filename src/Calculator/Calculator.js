@@ -16,6 +16,7 @@ class Calculator extends Component {
     second: 0,
   };
 
+  // Reads numbers as well as decimal
   handleNumberClick = (e) => {
     const number = e.target.value;
     if (!this.state.operator) {
@@ -25,6 +26,7 @@ class Calculator extends Component {
     }
   };
 
+  // Reads operators
   handleOperatorClick = (e) => {
     const operator = e.target.value;
     const first = parseFloat(this.state.first);

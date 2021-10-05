@@ -1,0 +1,91 @@
+/*
+* Stylesheet for buttons
+* @author: Dory A.Azar
+*/
+
+.default-button {
+
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  font-size: 1rem;
+  margin: 10px 4px;
+  padding: 0 1rem;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.default-button:hover {
+  box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+  background-color: #f8f9fa;
+  border: 1px solid #dadce0;
+  color: #202124;
+}
+
+.primary-button {
+
+  background-color: #000;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  margin: 10px 4px;
+  padding: 0 1rem;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.primary-button:hover {
+  box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+  background-color: #f8f9fa;
+  border: 1px solid #dadce0;
+  color: #202124;
+}
+
+
+
+button:focus {
+  border: 1px solid #4285f4;
+  outline: none;
+}
+
+.selected-button {
+
+  background-color: #929292;
+  border: 1px solid #929292;
+  color: #000000;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin: 10px 4px;
+  padding: 0 1rem;
+  line-height: 27px;
+  height: 36px;
+  width: 54px;
+  text-align: center;
+  user-select: none;
+}
+
+.disabled-button {
+
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #adadad;
+  font-size: 1rem;
+  margin: 10px 4px;
+  padding: 0 1rem;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  user-select: none;
+}
